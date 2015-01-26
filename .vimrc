@@ -30,7 +30,7 @@ Bundle 'gmarik/vundle'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "语法高亮
 """""""""""""""""""""""""""""""
-" Bundle "vim-scripts/Python-mode-klen"
+Bundle "vim-scripts/Python-mode-klen"
 
 
 " Bundle 'JavaScript-syntax'
@@ -323,19 +323,6 @@ map <leader>db :DoxBlock<CR>
 map <leader>dc a /*  */<LEFT><LEFT><LEFT> 
 
 
-"----------------------------------------------------------------- 
-" plugin ? ZenCoding.vim 很酷的插件，HTML代码生成 
-" 插件最新版：http://github.com/mattn/zencoding-vim 
-" 常用命令可看：http://nootn.com/blog/Tool/23/ 
-"----------------------------------------------------------------- 
-
-
-"----------------------------------------------------------------- 
-" plugin ? checksyntax.vim    JavaScript常见语法错误检查 
-" 默认快捷方式为 F5 
-"----------------------------------------------------------------- 
-let g:checksyntax_auto = 0 " 不自动检查 
-
 
 "----------------------------------------------------------------- 
 " plugin - NeoComplCache.vim    自动补全插件 
@@ -353,30 +340,6 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 "neocomplcache config end
 
 
-
-" plugin - matchit.vim   对%命令进行扩展使得能在嵌套标签和语句之间跳转 
-" % 正向匹配      g% 反向匹配 
-" [% 定位块首     ]% 定位块尾 
-"----------------------------------------------------------------- 
-
-
-"----------------------------------------------------------------- 
-" plugin - vcscommand.vim   对%命令进行扩展使得能在嵌套标签和语句之间跳转 
-" SVN/git管理工具 
-"----------------------------------------------------------------- 
-
-
-"----------------------------------------------------------------- 
-" plugin ? a.vim 
-"----------------------------------------------------------------- 
-" 函数和变量列表 
- map <F4> :TlistToggle<CR> 
-" 
-" " 搜索当前词，并打开quickfix窗口 
-map <F5> :call Search_Word()<CR> 
-" 
-" " 全能补全 
-" noremap <F8> <C-x><C-o>
 
 "=======================================================================
 
@@ -404,7 +367,9 @@ set nowrap
 " let g:pymode_trim_whitespaces = 1
 " let g:pymode_motion = 1
 " let g:pymode_lint_on_fly = 0
-" let g:pymode_folding = 0
+let g:pymode_lint_on_write = 0
+let g:pymode_folding = 0
+let g:pymode_rope_goto_definition_cmd = 'e'
 " let g:pymode_syntax = 1
 " let g:pymode_lint_cwindow = 0
 " let g:pymode_lint_signs = 1
