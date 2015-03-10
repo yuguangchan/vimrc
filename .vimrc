@@ -30,9 +30,7 @@ Bundle 'gmarik/vundle'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "语法高亮
 """""""""""""""""""""""""""""""
-Bundle "vim-scripts/Python-mode-klen"
-
-
+Bundle "vim-scripts/Python-mode-klen" 
 " Bundle 'JavaScript-syntax'
 " Bundle 'jQuery'
 " Bundle 'othree/html5.vim'
@@ -50,6 +48,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'taglist.vim'
 Bundle 'bufexplorer.zip'
+Bundle 'kien/ctrlp.vim'
 " Bundle 'fholgado/minibufexpl.vim'
 " Bundle 'winmanager'
 " Bundle 'Lokaltog/vim-powerline'
@@ -102,7 +101,7 @@ filetype plugin indent on   " 开启插件
 "==============================================================================
 set nocompatible            " 关闭 vi 兼容模式 
 syntax on                   " 自动语法高亮 
-colorscheme default         " 设定配色方案 
+colorscheme ron				" 设定配色方案 
 set number                  " 显示行号 
 set cursorline              " 突出显示当前行 
 set ruler                   " 打开状态栏标尺 
@@ -132,10 +131,10 @@ set cmdheight=1             " 设定命令行的行数为 1
 set laststatus=2            " 显示状态栏 (默认值为 1, 无法显示状态栏) 
 set statusline=/%<%F[%1*%M%*%n%R%H]%=/%y/%0(%{&fileformat}/%{&encoding}/%{&fileencoding}/%c:%l/%L%)/ 
                             " 设置在状态行显示的信息 
-set foldenable              " 开始折叠 
-set foldmethod=syntax       " 设置语法折叠 
-set foldcolumn=0            " 设置折叠区域的宽度 
-setlocal foldlevel=1        " 设置折叠层数为 
+" set foldenable              " 开始折叠 
+" set foldmethod=syntax       " 设置语法折叠 
+" set foldcolumn=0            " 设置折叠区域的宽度 
+" setlocal foldlevel=1        " 设置折叠层数为 
 " set foldclose=all           " 设置为自动关闭折叠                            
 " nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> 
                             " 用空格键来开关折叠 
